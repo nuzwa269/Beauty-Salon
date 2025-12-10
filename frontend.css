@@ -1,0 +1,581 @@
+/**
+ * Beauty Salon Manager - Frontend Styles
+ */
+
+/* Booking Widget */
+.bsm-booking-widget {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.bsm-booking-steps {
+    margin-bottom: 30px;
+}
+
+.bsm-step {
+    display: none;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.bsm-step.active {
+    display: block;
+}
+
+.bsm-step h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Form Elements */
+.bsm-form-group {
+    margin-bottom: 20px;
+}
+
+.bsm-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.bsm-form-group input,
+.bsm-form-group select,
+.bsm-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.bsm-form-group input:focus,
+.bsm-form-group select:focus,
+.bsm-form-group textarea:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+}
+
+/* Service Selection */
+.bsm-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.bsm-service-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.bsm-service-card:hover {
+    border-color: #007cba;
+    box-shadow: 0 2px 8px rgba(0, 124, 186, 0.1);
+}
+
+.bsm-service-card.selected {
+    border-color: #007cba;
+    background-color: #f0f8ff;
+}
+
+.bsm-service-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.bsm-service-price {
+    color: #007cba;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bsm-service-duration {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Staff Selection */
+.bsm-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.bsm-staff-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.bsm-staff-card:hover {
+    border-color: #007cba;
+    box-shadow: 0 2px 8px rgba(0, 124, 186, 0.1);
+}
+
+.bsm-staff-card.selected {
+    border-color: #007cba;
+    background-color: #f0f8ff;
+}
+
+.bsm-staff-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.bsm-staff-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.bsm-staff-role {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Time Slots */
+.bsm-time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.bsm-time-slot {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.bsm-time-slot:hover:not(.unavailable) {
+    border-color: #007cba;
+    background-color: #f0f8ff;
+}
+
+.bsm-time-slot.selected {
+    border-color: #007cba;
+    background-color: #007cba;
+    color: white;
+}
+
+.bsm-time-slot.unavailable {
+    opacity: 0.5;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* Calendar View */
+.bsm-calendar {
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bsm-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.bsm-calendar-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.bsm-calendar-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.bsm-calendar-nav button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.bsm-calendar-nav button:hover {
+    background-color: #f5f5f5;
+}
+
+.bsm-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #eee;
+}
+
+.bsm-calendar-day {
+    background: white;
+    padding: 10px;
+    min-height: 80px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bsm-calendar-day:hover:not(.other-month) {
+    background-color: #f9f9f9;
+}
+
+.bsm-calendar-day.other-month {
+    color: #ccc;
+    background-color: #fafafa;
+}
+
+.bsm-calendar-day.today {
+    background-color: #e3f2fd;
+}
+
+.bsm-calendar-day.selected {
+    background-color: #007cba;
+    color: white;
+}
+
+.bsm-calendar-day.has-appointments {
+    font-weight: bold;
+}
+
+.bsm-calendar-day .date-number {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.bsm-calendar-day .appointment-count {
+    font-size: 10px;
+    color: #007cba;
+}
+
+.bsm-calendar-day.selected .appointment-count {
+    color: white;
+}
+
+/* Booking Summary */
+.bsm-booking-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.bsm-summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.bsm-summary-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 10px;
+    border-top: 2px solid #007cba;
+}
+
+.bsm-summary-label {
+    color: #666;
+}
+
+.bsm-summary-value {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Client Portal */
+.bsm-client-portal {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.bsm-portal-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.bsm-portal-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.bsm-portal-tab {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+}
+
+.bsm-portal-tab.active {
+    border-bottom-color: #007cba;
+    color: #007cba;
+}
+
+.bsm-portal-content {
+    display: none;
+}
+
+.bsm-portal-content.active {
+    display: block;
+}
+
+/* Appointment List */
+.bsm-appointment-list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bsm-appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.bsm-appointment-item:last-child {
+    border-bottom: none;
+}
+
+.bsm-appointment-details {
+    flex: 1;
+}
+
+.bsm-appointment-service {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.bsm-appointment-datetime {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.bsm-appointment-staff {
+    color: #007cba;
+    font-size: 12px;
+}
+
+.bsm-appointment-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bsm-appointment-status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.bsm-appointment-status.confirmed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.bsm-appointment-status.completed {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.bsm-appointment-status.cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Action Buttons */
+.bsm-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.bsm-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.bsm-btn-primary {
+    background-color: #007cba;
+    color: white;
+}
+
+.bsm-btn-primary:hover {
+    background-color: #005a8b;
+}
+
+.bsm-btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.bsm-btn-secondary:hover {
+    background-color: #545b62;
+}
+
+.bsm-btn-outline {
+    background-color: transparent;
+    color: #007cba;
+    border: 1px solid #007cba;
+}
+
+.bsm-btn-outline:hover {
+    background-color: #007cba;
+    color: white;
+}
+
+/* Loading States */
+.bsm-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #666;
+}
+
+.bsm-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007cba;
+    border-radius: 50%;
+    animation: bsm-spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes bsm-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bsm-services-grid,
+    .bsm-staff-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bsm-time-slots {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .bsm-calendar-grid {
+        gap: 1px;
+    }
+    
+    .bsm-calendar-day {
+        padding: 5px;
+        min-height: 60px;
+    }
+    
+    .bsm-appointment-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .bsm-actions {
+        flex-direction: column;
+    }
+}
+
+/* Error States */
+.bsm-error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.bsm-success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Accessibility */
+.bsm-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Focus styles */
+.bsm-form-group input:focus,
+.bsm-form-group select:focus,
+.bsm-form-group textarea:focus,
+.bsm-btn:focus,
+.bsm-service-card:focus,
+.bsm-staff-card:focus,
+.bsm-time-slot:focus {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .bsm-booking-widget {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .bsm-actions {
+        display: none;
+    }
+}
